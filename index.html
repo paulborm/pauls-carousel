@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pauls Carousel</title>
+
+    <link rel="stylesheet" href="/pauls-carousel.css" />
+    <script type="module" defer src="/pauls-carousel.js"></script>
+
+    <style>
+      /*
+       * Demo styles
+       */
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: hwb(0 11% 89%);
+        color-scheme: dark;
+      }
+
+      main {
+        display: grid;
+        place-content: center;
+        margin: 0 auto;
+        min-height: 100lvh;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        aspect-ratio: 1 / 1;
+        inline-size: 100%;
+      }
+
+      pauls-carousel#demo-carousel {
+        --width: 400px;
+        --height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <pauls-carousel id="demo-carousel">
+        <div class="pauls-carousel-track">
+          <img
+            src="https://www.placecage.com/400/400"
+            alt=""
+            loading="lazy"
+            decoding="async"
+            width="400"
+            height="400"
+          />
+          <img
+            src="https://www.stevensegallery.com/400/400"
+            alt=""
+            loading="lazy"
+            decoding="async"
+            width="400"
+            height="400"
+          />
+          <img
+            src="https://www.fillmurray.com/400/400"
+            alt=""
+            loading="lazy"
+            decoding="async"
+            width="400"
+            height="400"
+          />
+        </div>
+      </pauls-carousel>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+/*
+ * The component styles enable it to work without any JS
+ *  and therefor must be loaded in addition.
+ */
+
+/*
+ * START: BASE
+ */
+
+pauls-carousel {
+  --width: auto;
+  --height: auto;
+  --color-pagination: hwb(0 75% 25%);
+  --color-pagination-active: hwb(210 0% 0%);
+
+  display: block;
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  aspect-ratio: 1 / 1;
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+ * END: BASE
+ */
+
+/*
+ * START: TRACK
+ */
+
+pauls-carousel > .pauls-carousel-track {
+  --_scrollbar-thumb-color: rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  align-items: flex-start;
+  position: relative;
+  z-index: 0;
+}
+
+/* SCROLLBARS START */
+
+/* Works on Firefox */
+pauls-carousel > .pauls-carousel-track {
+  scrollbar-width: none;
+  scrollbar-color: var(--_scrollbar-thumb-color) transparent;
+}
+
+pauls-carousel > .pauls-carousel-track > * {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  scroll-snap-align: center;
+  flex: 0 0 auto;
+}
+
+/* Works on Chrome, Edge, and Safari */
+pauls-carousel > .pauls-carousel-track::-webkit-scrollbar {
+  /* height: 4px; */
+  height: 0px;
+}
+
+pauls-carousel > .pauls-carousel-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+pauls-carousel > .pauls-carousel-track::-webkit-scrollbar-thumb {
+  background-color: var(--_scrollbar-thumb-color);
+  border-radius: 20px;
+  opacity: 0.5;
+  display: none;
+}
+
+/* SCROLLBARS END */
+
+/*
+ * END: TRACK
+ */
