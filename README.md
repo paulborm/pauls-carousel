@@ -2,6 +2,8 @@
 
 A nice and easy to use carousel/ slider web component. One could say it's heavily inspired by the Instagram one.
 
+See the [Demo](https://paulborm.github.io/pauls-carousel/)
+
 ![screen capture](demo.gif)
 
 ## Installation
